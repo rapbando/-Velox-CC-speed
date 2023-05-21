@@ -1,7 +1,7 @@
-### -Velox-CC-speed
+# -Velox-CC-speed
 
 
-# REQUIREMENTS:
+### REQUIREMENTS:
 
 
 - Modern car with CC commanded trough CANbus
@@ -10,7 +10,7 @@
 - The correct speed camera locations database for your country converted to sqlite format (Italian DB is already provided).
 - Last but not least you need to obtain the 2 strings that correspond to your car + and - CC buttons and substitute them in at line 42 and 43 in the python  <a href="https://github.com/rapbando/-Velox-CC-speed/blob/main/CC_speed.py">script</a> , easy way is to use <a href="https://savvycan.com">savvycan</a>
 
-# USAGE:
+### USAGE:
 
 `python3 CC_speed.py`
 
