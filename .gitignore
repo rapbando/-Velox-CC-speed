@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+last_location.txt
+excess.txt
+*.bak
+*.orig
