@@ -55,7 +55,7 @@ SIGNAL_GAP_S = 0.25             # Pause between two C.C. button frames
 SETTLE_TIME_S = 20              # Wait for the car to reach the new speed
 ERROR_RETRY_S = 5               # Wait after a failed cycle
 GPS_TIMEOUT_S = 60              # Max time to wait for termux-location
-MAX_SIGNALS_PER_CYCLE = 40     # Safety cap: never send more frames than this at once
+MAX_SIGNALS_PER_CYCLE = 30     # Safety cap: never send more frames than this at once
 MAX_TOTAL_REDUCTION = 60        # Safety cap: never lower C.C. by more than this in total
 SOUND_ALERT = True              # Announce each new velox when it comes in range
 ALERT_TEXT = "Velox, limite %d"  # Spoken text, %d = speed limit in km/h
@@ -173,7 +173,7 @@ def nearest_velox(conn, lon, lat, radius_m=SEARCH_RADIUS_M):
     return best
 
 
-# --- Cruise control (CAN via ESP32RET telnet) --------------------------------
+# --- Cruise control (CAN via ESP32RET socket) --------------------------------
 
 def send_cc_signals(frame, count):
     """Send `frame` `count` times. Returns how many were actually sent."""
